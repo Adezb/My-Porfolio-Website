@@ -1,0 +1,152 @@
+.app__navbar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(209, 204, 204, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app__navbar-logo img {
+  width: 200px;
+  height: 120px;
+}
+
+@media screen and (min-width: 2000px) {
+  .app__navbar-logo img {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.app__navbar-links li {
+  padding: 0 1rem;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.app__navbar-links li a {
+  text-decoration: none;
+  color: var(--gray-color);
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.app__navbar-links li a:hover {
+  color: var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 900px) {
+  .app__navbar-links {
+    display: none;
+  }
+
+  .app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+  }
+
+  .app__navbar-menu svg {
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+
+  .app__navbar-menu div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1rem;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background: url(../../assets/bgWhite.png);
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+    box-shadow: 0 0 20px rgba(134, 134, 134, 0.15);
+  }
+
+  .app__navbar-menu div svg {
+    width: 10%;
+    height: 10%;
+    color: var(--secondary-color);
+    margin: 0.5rem 1rem;
+  }
+
+  .app__navbar-menu div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app__navbar-menu div ul li {
+    margin: 1rem;
+  }
+
+  .app__navbar-menu div ul li a {
+    text-decoration: none;
+    color: var(--gray-color);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app__navbar-menu div ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .app__navbar-menu div {
+    display: none;
+  }
+
+  .app__navbar-menu {
+    display: none;
+  }
+}
