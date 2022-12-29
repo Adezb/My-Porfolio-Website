@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { AppWrap } from "../../wrapper";
@@ -34,6 +35,10 @@ const Testimonials = () => {
   const test = testimonials[activeIndex];
   return (
     <>
+      <Helmet>
+        <title>Testimonials</title>
+        <meta name="description" content="Testimonials" />
+      </Helmet>
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">

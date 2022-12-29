@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 import { images } from "../../constants";
 import { AppWrap } from "../../wrapper";
@@ -39,6 +40,10 @@ const Footer = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Footer</title>
+        <meta name="description" content="Footer" />
+      </Helmet>
       <h2 className="head-text">You can contact me here</h2>
 
       <div className="app__footer-cards">

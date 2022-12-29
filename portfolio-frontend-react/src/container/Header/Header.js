@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
@@ -16,6 +17,10 @@ const scaleVariants = {
 const Header = () => {
   return (
     <div className="app__header app__flex">
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Home" />
+      </Helmet>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1.8 }}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import { AppWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -16,6 +17,10 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="About" />
+      </Helmet>
       <h2 className="head-text">
         I know that a <span>Good App</span>
         <br /> is key to <span>Good Business</span>

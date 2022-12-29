@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import { AppWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -25,6 +26,10 @@ const Skills = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Skills</title>
+        <meta name="description" content="Skills" />
+      </Helmet>
       <h2 className="head-text">Skills</h2>
 
       <div className="app__skills-container">
