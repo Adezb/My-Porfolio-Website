@@ -185,6 +185,25 @@
   }
 }
 
+/* @media screen and (max-width: 548px) {
+  .app__social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -4.5rem;
+    z-index: 2;
+  }
+
+  .app__navigation {
+    display: none;
+  }
+} */
+
 @media screen and (max-width: 500px) {
   .app__navigation,
   .app__social {
